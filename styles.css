@@ -1,4 +1,4 @@
-/*
+/* ||
 COLOR PALETTE
 
 #16130F - background
@@ -17,6 +17,8 @@ COLOR PALETTE
 #DCE4EF gray text
 */
 
+/* || GENERAL STYLES */
+
 body {
     background: #1c1c1c;
     color: #DCE4EF;
@@ -32,12 +34,6 @@ body {
     margin: 0px;
     padding: 60px 40px 20px 40px;
     text-align: center;
-    /* background-image: linear-gradient(#202937, #1c1c1c); */
-}
-
-#hero-name {
-    color: #65de86;
-    /* border-bottom: 3px solid #FBE134; */
 }
 
 #hero-img {
@@ -49,16 +45,54 @@ body {
     box-shadow: 0 0 30px #202937;
 }
 
+/* || TYPOGRAPHY */
+
 h1 {
     margin-top: 0;
     font-style: normal;
 }
 
 h2 {
-    margin-top: 0;
+    margin: 0 0 10px 0;
 }
 
-.sub-container {
+.section-heading {
+    color: #65de86;
+    font-size: 2em;
+}
+
+#hero-name {
+    color: #65de86;
+}
+
+.skill {
+    margin: 0 4px 0 0;
+    padding: 6px 10px;
+    background: #1c1c1c;
+    color: #DCE4EF;
+    border: 1px solid #40714d;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+a {
+    padding: 5px 10px;
+    color: #E4B61A;
+    background-color: #263548;
+    border-radius: 4.6px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #202937;
+    background-color: #E4B61A;
+}
+
+/* || LAYOUT */
+
+section {
     margin: 30px 0px;
     width: 100%;
     height: auto;
@@ -68,44 +102,23 @@ h2 {
     background-image: linear-gradient(180turn, #202937, 20%, #1c1c1c);
 }
 
-.container-holder {
-    margin: 60px 0 0 0;
-    display: flex;
-    justify-content: space-around;
-}
-
-.section-heading {
-    margin-top: 0;
-    color: #65de86;
-    font-size: 2em;
-}
-
-.skill {
-    margin: 4px;
-    padding: 6px 10px;
-    background: #1c1c1c;
-    color: #DCE4EF;
-    border: 1px solid #65de86;
-    border-radius: 5px;
-    display: inline-block;
-}
-
 .example-container {
-    margin: 0px;
+    margin: 0px 5px;
     padding: 15px;
     width: 300px;
     height: 200px;
     border-radius: 10px;
     border: 1px solid #202937;
     transition: background-color 0.5s;
-    /* display: inline-block; */
 }
 
 .example-container:hover {
-    border: 1px solid #65de86;
+    border: 2px solid #263548;
     background: #202937;
     box-shadow: 3px 3px 10px black;
 }
+
+/* || UTILITIES */
 
 .flex {
     display: flex;
