@@ -19,6 +19,10 @@ COLOR PALETTE
 
 /* --- GENERAL STYLES --- */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: #1c1c1c;
     color: #DCE4EF;
@@ -129,8 +133,12 @@ section {
     background-color: #202937;
 }
 
+.examples {
+    gap: 10px;
+}
+
 .example-container {
-    margin: 0px 0.5em 0.5em 0;
+    margin: 0px 0 0.5em 0;
     padding: 15px;
     width: 100%;
     box-sizing: border-box;
@@ -143,6 +151,20 @@ section {
     flex-direction: column;
 }
 
+.example-with-img {
+    background-color: rgba(0,0,0,0.4);
+    background-blend-mode: multiply;
+    background-image: url("images/DttP-2.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 50px black, 3px 3px 10px black;
+}
+
+.example-with-img p {
+    max-width: 600px;
+    text-shadow: 1px 1px 2px #202937;
+}
+
 /* --- UTILITIES --- */
 
 
@@ -150,10 +172,6 @@ section {
 /* --- MEDIA QUERIES --- */
 
 @media (min-width: 645px){
-
-    body {
-        font-size: 55%;
-    }
 
     section {
         padding: 1.6em 3.5em;
