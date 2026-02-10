@@ -1,121 +1,107 @@
 <html lang="en">
     <head>
+        <!-- CSS -->
         <link rel="stylesheet" href="styles.css">
+
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet">
+
+        <!-- Icons CDN -->
+		<script src="https://kit.fontawesome.com/77037f1d9e.js" crossorigin="anonymous"></script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="stars"></div>
+        <!-- <div class="stars"></div>
         <div class="twinkling"></div> 
-        <div class="clouds"></div>
+        <div class="clouds"></div> -->
 
         <!-- HERO CONTAINER -->
         <div id="hero-container">
-            <!-- <h2>Hello, adventurer.</h2> -->
-            <h1>Hello, my name is <span class="emphasis">Bethany</span></h1>
+            <div class="stars"></div>
+            <div class="twinkling"></div> 
+            <div class="clouds"></div>
             <img id="hero-img" 
                 src="./images/hero_pic.jpg" 
                 alt="Profile picture of Bethany Helwig smiling at the camera">
-            <h1>I am a <span class="emphasis">full stack software developer</span></h1>
+            <div class="title-container">
+                <h1>Hello, my name is <span class="emphasis">Bethany</span>.</h1>
+                <h1>I am a <span class="emphasis">full stack software developer</span>.</h1>
+                <div class="contact-container ">
+                    <p>FIND ME @</p>
+                    <a href="https://www.linkedin.com/in/bethany-helwig-53b08355/" class="icon-link"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/BethanyHelwig" class="icon-link"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-heading">
+            <h2>Projects</h2>
         </div>
 
         <!-- PROJECTS -->
-        <section aria-label="Projects">
-            <h2 class="section-heading">Projects</h2>
-            <div class="examples">
-                <div class="example-container">
-                    <h2>Quizzical</h2>
-                    <ul aria-label="Associated skills">
-                        <li>React</li>
-                        <li>RESTful API</li>
-                        <li>Javascript</li>
-                    </ul>
-                    <p>Online quiz that generates 5 random trivia questions.</p>
+        <section aria-label="Confab project">
+            <div class="project-section">
+                <div>
+                    <h2 class="section-heading">Confab</h2>
+                    <p><strong>A real-time messaging application</strong> that utilizes <span class="emphasis">React</span> 
+                        for the frontend and <span class="emphasis">Node.js</span> with <span class="emphasis">Express</span> 
+                        for the backend. Use of <span class="emphasis">RESTful API</span> with <span class="emphasis">Socket.IO</span> 
+                        for real-time communication connects to a <span class="emphasis">MongoDB</span> database. The Arcjet framework
+                        provides rate-limiting and additional security.
+                    </p>
+                    <div class="link-container">
+                        <a href="https://confab-spjh5.sevalla.app/login" class="example-link">View it live</a>
+                        <!-- <a href="https://github.com/BethanyHelwig/Quiz-Game" class="example-link">GitHub Repo</a> -->
+                    </div>
+                </div>
+                <div class="project-image-container">
+                    <img src="/images/confab2.jpg" />
+                </div>
+            </div>
+        </section>
+        
+        <section aria-label="Quizzical project">
+            <div class="project-section">
+                <div>
+                    <h2 class="section-heading">Quizzical</h2>
+                    <p><strong>An online quiz</strong> that generates 5 random trivia questions. <span class="emphasis">React</span> handles
+                        the frontend while <span class="emphasis">Node.js</span> along with <span class="emphasis">Express</span> handles the
+                        backend. Use of a <span class="emphasis">RESTful API</span> connects to the server that provides the trivia questions.
+                    </p>
                     <div class="link-container">
                         <a href="https://cute-taffy-a888ff.netlify.app/" class="example-link">Play it!</a>
                         <a href="https://github.com/BethanyHelwig/Quiz-Game" class="example-link">GitHub Repo</a>
                     </div>
                 </div>
-
-                <div class="example-container">
-                    <h2>13.Run</h2>
-                    <ul aria-label="Associated skills">
-                        <li>Flutter</li>
-                        <li>Dart</li>
-                        <li>MongoDB</li>
-                    </ul>
-                    <p>App that generates a customized half-marathon training plan with activity tracking.</p>
-                    <a href="https://github.com/BethanyHelwig/13.Run" class="example-link">13.Run GitHub Repo</a>
-                </div>
-                
-                <!-- <div class="example-container">
-                    <h2>Egg 'Em</h2>
-                    <ul aria-label="Associated skills">
-                        <li>Unity</li>
-                        <li>C#</li>
-                    </ul>
-                    <p>A web-based arcade game.</p>
-                    <a href="https://github.com/BethanyHelwig/Egg-Em" class="example-link">Egg 'Em GitHub Repo</a>
-                </div> -->
-
-                <div class="example-container">
-                    <h2>Pokédex</h2>
-                    <ul aria-label="Associated skills">
-                        <li>Java</li>
-                        <li>CSS</li>
-                        <li>RESTful API</li>
-                    </ul>
-                    <p>Recreated a Pokédex that pulls random Pokémon from a RESTful API and stores data in a local file.</p>
-                    <a href="https://github.com/BethanyHelwig/Pokedex" class="example-link">Pokédex GitHub Repo</a>
+                <div class="project-image-container">
+                    <img src="/images/quizzical2.jpg" />
                 </div>
             </div>
-            <div class="example-container example-with-img">
-                <h2>Descent to the Pinnacle (In progress)</h2>
-                <ul aria-label="Associated skills">
-                    <li>C#</li>
-                    <li>Unity</li>
-                </ul>
-                <p>Strategy game in which the user coordinates NPCs which are driven by Behavior Tree AI:</p>
-                <p>"Gather a band of misfits with their own unique (and troublesome) quirks to defeat dungeon bosses. Be the leader they need and watch the chaos unfold."</p>
+        </section>
+
+        <section aria-label="Descent to the Pinnacle project">
+            <div class="project-section">
+                <div>
+                    <h2 class="section-heading">Descent to the Pinnacle</h2>
+                    <h3 class="emphasis">(In progress)</h3>
+                    <p><strong>Strategy 3D game</strong> in which the user gathers a band of misfits with their own unique (and troublesome) 
+                        quirks to defeat dungeon bosses. Be the leader and watch the chaos unfold. Utilizes <span class="emphasis">C#</span>
+                        and the <span class="emphasis">Unity</span> engine with Behavior Tree AI controlling NPCs and characters.
+                    </p>
+                </div>
+                <div class="project-image-container">
+                    <img src="/images/DttP1.jpg" />
+                </div>
             </div>
         </section>
 
-        <!-- SKILLS -->
-        <section aria-label="Skills">
-            <h2 class="section-heading">Skills</h2>
-            <h3>{ Languages }</h3>
-            <ul>
-                <li>Javascript</li>
-                <li>CSS</li>
-                <li>HTML</li>
-                <li>Java</li>
-                <li>C#</li>
-                <li>Dart</li>
-                <li>PL/SQL</li>
-            </ul>
-            <h3>{ Frameworks }</h3>
-            <ul>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Express</li>
-            </ul>
-            <h3>{ Technologies }</h3>
-            <ul>
-                <li>RESTful APIs</li>
-                <li>Flutter</li>
-                <li>Unity</li>
-                <li>MongoDB</li>
-            </ul>
-        </section>
-
-        <!-- ABOUT -->
-        <section aria-label="Contact Info">
-            <h2 class="section-heading">Contact Me</h2>
-            <a href="https://www.linkedin.com/in/bethany-helwig-53b08355/">LinkedIn</a>
-            <a href="https://github.com/BethanyHelwig">GitHub</a>
-        </section>
+        <footer>
+            <p>2026 &copy; Bethany Helwig</p>
+        </footer>
 
     </body>
 </html>
