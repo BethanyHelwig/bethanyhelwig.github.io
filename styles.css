@@ -117,8 +117,30 @@ p {
 .section-heading {
     font-family: "Asimovian", sans-serif;
     color: #65de86;
-    font-size: 2em;
+    width: 100%;
+    /* font-size: 2em; */
     font-weight: 700;
+    position: relative;
+    /* z-index: -1; */
+}
+
+#confab-title,
+#quizzical-title,
+#dttp-title {
+    z-index: 10;
+    width: 100%;
+}
+
+.project-section .section-heading-decoration {
+    position: absolute;
+    top: 1.1rem;
+    left: -10px;
+    right: 0;
+    bottom: 0;
+    width: 150px;
+    height: 15px;
+    background-color: #c871fa57;
+    z-index: -1;
 }
 
 .emphasis {
@@ -159,21 +181,18 @@ a:active {
     color: #f0d6ff;
 }
 
-.example-link {
-    /* margin: auto 0 0 auto; */
-}
-
 /* --- LAYOUT --- */
 
 section {
     margin: 20px 0px;
     width: 90%;
+    max-width: 1100px;
     height: auto;
     padding: 0; /* 25px 60px */
     border: 1px solid rgba(128, 128, 128, 0.192);
     border-radius: 10px;
     box-sizing: border-box;
-    background-image: linear-gradient(#1d1d1d, 20%, #0e0e0e);
+    background-image: linear-gradient(#2c2c2c, 20%, #1a1a1a);
 }
 
 .projects-heading {
@@ -181,10 +200,30 @@ section {
     color: #65de86;
     font-size: 2.5em;
     font-weight: 700;
-    align-self: start;
-    width: 80%;
+    align-self: center;
+    width: 90%;
     height: auto;
     padding: 0 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#projects-title {
+    text-align: center;
+    position: relative;
+}
+
+#projects-heading-decoration {
+    position: absolute;
+    top: 52px;
+    left: 44px;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 22px;
+    background-color: #c871fa57;
+    z-index: -1;
 }
 
 .reverse {
@@ -301,18 +340,18 @@ section {
 
 .stars {
     background:#000 url(images/stars.png) repeat top center;
-    z-index:-3;
+    z-index:-4;
 }
 
 .twinkling{
     background:transparent url(images/twinkling.png) repeat top center;
-    z-index:-2;
+    z-index:-3;
     animation:move-twink-back 200s linear infinite;
 }
 
 .clouds{
     background:transparent url(images/clouds.png) repeat top center;
-    z-index:-1;
+    z-index:-2;
     opacity: .4;
     animation:move-clouds-back 200s linear infinite;
 }
