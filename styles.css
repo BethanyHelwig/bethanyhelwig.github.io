@@ -19,6 +19,12 @@ COLOR PALETTE
 
 /* --- GENERAL STYLES --- */
 
+/* Required Core Stylesheet */
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+/* Optional Theme Stylesheet */
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
 * {
     box-sizing: border-box;
 }
@@ -124,9 +130,9 @@ p {
 
 #confab-title,
 #quizzical-title,
-#dttp-title {
+#dttp-title,
+#run-title {
     z-index: 10;
-    width: 100%;
 }
 
 .project-section .section-heading-decoration {
@@ -290,11 +296,12 @@ section {
     justify-content: space-between;
     height: 100%;
     padding: 2em;
-}
-
-.project-section div {
     width: 100%;
 }
+
+/* .project-section div {
+    width: 100%;
+} */
 
 .project-section .link-container {
     width: 100%;
@@ -309,6 +316,50 @@ section {
     width: 100%;
     height: auto;
 }
+
+/* --- SLIDESHOW --- */
+
+.slideshow {
+  position: relative;
+  /* width: 800px; */
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  z-index: 0; /* 👈 keep slides behind */
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* 🔥 FIX: buttons always on top */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* 👈 ensures no fading effect */
+
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.prev { left: 10px;  }
+.next { right: 10px; }
 
 /* --- BACKGROUND STARRY SKY --- */
 
@@ -366,8 +417,10 @@ section {
     }
 
     .project-section {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
         padding: 0;
+        gap: 2em;
     }
 
     #hero-container {
@@ -378,10 +431,6 @@ section {
     .title-container {
         padding-left: 2em;
         align-items: start;
-    }
-
-    .project-section div {
-        width: 47%;
     }
 
 }

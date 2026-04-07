@@ -12,6 +12,12 @@
         <!-- Icons CDN -->
 		<script src="https://kit.fontawesome.com/77037f1d9e.js" crossorigin="anonymous"></script>
 
+        <!-- Required Core Stylesheet -->
+        <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+        <!-- Optional Theme Stylesheet -->
+        <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
@@ -61,11 +67,41 @@
                     </p>
                     <div class="link-container">
                         <a href="https://confab-spjh5.sevalla.app/login" class="example-link">View it live</a>
-                        <!-- <a href="https://github.com/BethanyHelwig/Quiz-Game" class="example-link">GitHub Repo</a> -->
+                        <a href="https://github.com/BethanyHelwig/Confab" class="example-link">GitHub Repo</a>
                     </div>
                 </div>
-                <div class="project-image-container">
-                    <img src="/images/confab2.jpg" />
+                <div class="slideshow">
+                    <img class="slide active" src="/images/confab2.jpg">
+                    <img class="slide" src="/images/confab1.jpg">
+
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section aria-label="13.Run project">
+            <div class="project-section">
+                <div>
+                    <div class="section-heading" id="run-title">
+                        <div class="section-heading-decoration"></div>
+                        <h2>13.Run</h2>
+                    </div>
+                    <p><strong>A half-marathon training application</strong> that creates a customized training program based on
+                        the user's initial evaluation (using algorithms from an Exercise Physiologist). It utilizes <span class="emphasis">Dart/Flutter</span> 
+                        in concert with <span class="emphasis">Google Firebase</span> for cloud management of data and user authentication.
+                    </p>
+                    <div class="link-container">
+                        <a href="https://github.com/BethanyHelwig/13.Run" class="example-link">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="slideshow">
+                    <img class="slide active" src="/images/13pointrun1.jpg">
+                    <img class="slide active" src="/images/13pointrun2.jpg">
+                    <img class="slide active" src="/images/13pointrun3.jpg">
+
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
                 </div>
             </div>
         </section>
@@ -86,8 +122,12 @@
                         <a href="https://github.com/BethanyHelwig/Quiz-Game" class="example-link">GitHub Repo</a>
                     </div>
                 </div>
-                <div class="project-image-container">
-                    <img src="/images/quizzical2.jpg" />
+                <div class="slideshow">
+                    <img class="slide active" src="/images/quizzical2.jpg">
+                    <img class="slide" src="/images/quizzical1.jpg">
+
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
                 </div>
             </div>
         </section>
@@ -105,9 +145,17 @@
                         and the <span class="emphasis">Unity</span> engine with Behavior Tree AI controlling NPCs and characters.
                     </p>
                 </div>
-                <div class="project-image-container">
-                    <img src="/images/DttP1.jpg" />
+                <div class="slideshow">
+                    <img class="slide active" src="/images/DttP1.jpg">
+                    <img class="slide" src="/images/DttP2.jpg">
+                    <img class="slide" src="/images/DttP3.jpg">
+
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
                 </div>
+                <!-- <div class="project-image-container">
+                    <img src="/images/DttP1.jpg" />
+                </div> -->
             </div>
         </section>
 
@@ -116,4 +164,5 @@
         </footer>
 
     </body>
+    <script src="index.js"></script>
 </html>
